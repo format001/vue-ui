@@ -136,12 +136,12 @@ export default {
 
         const confirm = () => {
             state.modalShow = false;
-            ctx.emit('confirm', '222');
+            ctx.emit('confirm', 'confirm');
         }
 
         const cancel = () => {
             state.modalShow = false;
-            ctx.emit('close', 'ssss');
+            ctx.emit('close', 'close');
         }
 
         return {

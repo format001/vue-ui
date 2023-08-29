@@ -1,27 +1,18 @@
 <template>
-    <div class="wrapper">
-        111
+    <div class="index-wrapper">
+        index
     </div>
 </template>
 
-<script>
-export default {
-    name: "Index",
+<script setup>
 
-    setup () {
-
-    }
-
-}
 </script>
 
 <style scoped lang="scss">
-.wrapper{
-    margin-left: 50px;
-    height: 1rem;
-    width: 1rem;
-    background-color: #42b983;
+.index-wrapper {
+    //width: 100%;
+    height: 100%;
+    overflow-y: scroll;
     font-size: .1rem;
-    //overflow-y: scroll;
 }
 </style>

@@ -1,21 +1,28 @@
 <template>
-    <div class="wrapper">
-         <div>home</div>
-    </div>
+    <div class="wrapper"> home </div>
 </template>
 
-<script>
+<script setup>
+import {
+    onUnmounted,
+    onBeforeMount,
+    onMounted,
+    onUpdated,
+    onBeforeUpdate,
+    onBeforeUnmount,
+    ref, reactive
+} from "vue";
+import {
+    useStore
+} from "vuex";
+
+const store = useStore();
 
 
-export default {
-    name: "Home",
-   components: {
 
-   },
-    mounted () {
-        // 将匹配所有内容并将其放在 `$route.params.pathMatch` 下
-    }
-}
+
+
+
 </script>
 
 <style scoped lang="scss">

@@ -14,20 +14,19 @@ export default defineConfig({
             'styles': resolve(__dirname, '.', 'src/assets/styles'),
             'js': resolve(__dirname, '.', 'src/assets/js'),
             'utils': resolve(__dirname, '.', 'src/utils'),
-            'data': resolve(__dirname, '.', 'src/data'),
             'models': resolve(__dirname, '.', 'src/models'),
             'components': resolve(__dirname, '.', 'src/components'),
         },
     },
-    css: {
-        // css预处理器
-        preprocessorOptions: {
-            scss: {
-                charset: false,
-                //需要在assets下创建对应的文件global.scss
-                additionalData: '@import "./src/assets/styles/main.scss";',
-            },
-        },
-    }
-
+    // css: {
+    //     // css预处理器
+    //     preprocessorOptions: {
+    //         scss: {
+    //             charset: false,
+    //             //需要在assets下创建对应的文件global.scss
+    //             additionalData: '@import "./src/assets/styles/main.scss";',
+    //         },
+    //     },
+    // }
 })
+

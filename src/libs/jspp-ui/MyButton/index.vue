@@ -1,10 +1,10 @@
 <template>
-        <button
-            :style="{height: height}"
-            :class="`my-btn btn-${ type }`"
-        >
-          <slot>确定</slot>
-        </button>
+    <button
+        :style="{height: height}"
+        :class="`my-btn btn-${ type }`"
+    >
+      <slot>确定</slot>
+    </button>
 </template>
 
 <script setup>

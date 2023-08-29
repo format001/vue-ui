@@ -59,14 +59,6 @@ import ListItem from './components/ListItem.vue';
 
 import propsDefinition from './extends/props.js';
 
-import {
-    useTargetIndex,
-    useComputedData,
-    useRightListData,
-    useCheckedData,
-    useDragedItem
-} from './extends/hooks';
-
 const props = defineProps(propsDefinition);
 const options = props.data.map(({ title }) => title);
 

@@ -9,9 +9,9 @@ import MagnifierUi from './Magnifier/index'
 import StarsUi from './StarsUi/index'
 import ModalUi from './Modal/index'
 import Transfer from './Transfer/Transfer'
-import CalendarUi from './Calendar/Index'
 import MyButton from './MyButton'
 import InputUi from './InputUi'
+import ButtonUi from './ButtonUi'
 
 let MyUiComponents = {
     CarouselUi,
@@ -25,15 +25,17 @@ let MyUiComponents = {
     StarsUi,
     ModalUi,
     Transfer,
-    CalendarUi,
     MyButton,
-    InputUi
+    InputUi,
+    ButtonUi
 };
 
 
 /*
 * 自定义全局组件
 * 自定义组件名
+*
+* app.component(组件名, 组件本身)
 * */
 MyUiComponents.install = function (app, options) {
     for (let comp in MyUiComponents) {

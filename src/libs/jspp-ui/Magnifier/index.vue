@@ -41,7 +41,6 @@
 </template>
 
 <script>
-import {reactive, toRefs} from 'vue'
 import { magnifier } from '../../directives/index.js'
 
 export default {
@@ -85,10 +84,9 @@ export default {
       default: 100
     },
   },
-  setup () {
+  mounted() {
 
 
-    return {}
   }
 }
 </script>

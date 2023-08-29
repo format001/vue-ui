@@ -1,14 +1,14 @@
 <template>
   <div class="ui-stars">
     <span
-        v-for="num in 5"
-        :key="num"
+        v-for="number in 5"
+        :key="number"
       :class="[
           'iconfont icon-star',
-          num <= starNum ? 'active' : ''
+          number <= starNum ? 'active' : ''
       ]"
         :style="{ fontSize: size + 'px'}"
-        @click="setStarNum(num)"
+        @click="setStarNum(number)"
     ></span>
   </div>
 </template>

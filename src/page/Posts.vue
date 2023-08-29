@@ -1,12 +1,25 @@
 <template>
-    <div>Posts</div>
+    <div>{{ $attrs }}</div>
 </template>
 
-<script>
-export default {
-    name: "Posts"
-}
+<script setup>
+
+        import {getCurrentInstance,
+            useAttrs
+        } from "vue";
+
+        defineProps({
+            data: {
+                type: Object
+            }
+        });
+
+
+        const attrs = useAttrs()
+        console.log(attrs)
 </script>
+
+
 
 <style scoped>
 

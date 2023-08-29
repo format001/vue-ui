@@ -1,4 +1,6 @@
-import {createApp} from 'vue'
+import {
+    createApp,
+} from 'vue'
 import App from './App.vue'
 
 import 'styles/resets.css';
@@ -6,10 +8,12 @@ import 'styles/border.css';
 import 'js/fastclick.js';
 import 'js/common.js';
 
-import {store} from './store/index.js'
+import {
+    store
+} from './store/index.js'
 import router from './router/index.js'
-
 import MyUiComponents from './libs/jspp-ui/index.js'
+
 /*
 * 全局注册自定义指令 VueLazyLoad
 * */
@@ -31,7 +35,7 @@ const app = createApp(App)
         loading: new URL(`/src/assets/images/loading.gif`, import.meta.url).href,
         error: new URL(`/src/assets/images/error.svg`, import.meta.url).href,
         preload: 1.2
-    })
+    });
 
 /**
  * 应用实例暴露了很多方法
@@ -66,4 +70,31 @@ const vm = app.mount('#app');
 * */
 
 
+// Vue2
+// new Vue({
+//     render: h => h(app)
+// }).$mount('app');
 
+/**
+ * template -> AST树（v-if  v-for  v-show @click）-> JS逻辑/过滤掉
+ * 干净的AST树 -> vNode虚拟节点 -> vDOM -> rDOM
+ *
+ * 每一次视图要更新
+ *
+ * 更新内容 -> vNode -> old vNode -> compare -> diff -> patch
+ * -> 更新rDOM描述 -> 根据patch -> 更新真实DOM
+ *
+ * 视图要变化 -> vNode -> 有/没有
+ *           没有 -> 重新组装vNode -> 更新DOM
+ *           有   -> 现成的vNode -> 更新DOM   keep-alive
+ *                   缓存当前组件的vNode
+ *                   不经过unmount
+ *
+ *           缓存的是组件的实例 -> 有什么？vNode
+ *
+ *
+ * vDOM  Virtual DOM
+ * vNode Virtual Node
+ * rDOM  Real DOM
+ * rNode Real Node
+ */

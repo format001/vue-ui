@@ -17,28 +17,28 @@
 </template>
 
 <script setup>
-const props = defineProps({
-    data: {
-        type: Array,
-        default: () => []
-    },
-    leftOrRight: {
-        type: String,
-        validator (value) {
-            return ['left', 'right'].includes(value);
+    const props = defineProps({
+        data: {
+            type: Array,
+            default: () => []
+        },
+        leftOrRight: {
+            type: String,
+            validator (value) {
+                return ['left', 'right'].includes(value);
+            }
         }
+    });
+
+    const emit = defineEmits(['checkboxClick', 'dragItem']);
+
+    const checkboxClick = (checked, leftOrRight, item) => {
+        emit('checkboxClick', checked, leftOrRight, item);
     }
-});
 
-const emit = defineEmits(['checkboxClick', 'dragItem']);
-
-const checkboxClick = (checked, leftOrRight, item) => {
-    emit('checkboxClick', checked, leftOrRight, item);
-}
-
-const dragItem = (item) => {
-    emit('dragItem', item);
-}
+    const dragItem = (item) => {
+        emit('dragItem', item);
+    }
 </script>
 
 <style lang="scss" scoped>
