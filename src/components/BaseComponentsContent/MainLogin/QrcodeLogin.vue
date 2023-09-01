@@ -4,31 +4,9 @@
     </div>
 </template>
 
-<script>
-import {
-    onMounted,
-    onActivated,
-    onUnmounted,
-    onDeactivated
-} from 'vue'
+<script setup>
 
-export default {
-    name: 'QrcodeLogin',
-    setup(){
-        onMounted(() => {
-            console.log('onMounted')
-        });
-        onActivated(() => {
-            console.log('onActivated')
-        });
-        onUnmounted(() => {
-            console.log('onUnmounted')
-        });
-        onDeactivated(() => {
-            console.log('onDeactivated')
-        });
-    }
-}
+
 </script>
 
 <style lang="scss">
