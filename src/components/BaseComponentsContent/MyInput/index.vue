@@ -28,6 +28,7 @@ export default {
         MyInput
     },
     setup(props, ctx){
+        console.log(ctx)
         let myName = ref('小野森森')
 
         return {

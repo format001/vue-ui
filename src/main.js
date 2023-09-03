@@ -1,5 +1,5 @@
 import {
-    createApp,
+    createApp, ref,
 } from 'vue'
 import App from './App.vue'
 
@@ -37,12 +37,6 @@ const app = createApp(App)
         preload: 1.2
     });
 
-app.config.errorHandler = (err, instance, info) => {
-    console.log('----------------')
-    console.log('err', err)
-    console.log('instance', instance)
-    console.log('info', info)
-}
 /**
  * 应用实例暴露了很多方法
  * 大多数方法都会返回createApp创建出来的应用实例

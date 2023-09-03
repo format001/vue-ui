@@ -1,25 +1,10 @@
 <template>
-    <div class="wrapper"> home </div>
+    <div class="wrapper">
+        home
+    </div>
 </template>
 
 <script setup>
-import {
-    onUnmounted,
-    onBeforeMount,
-    onMounted,
-    onUpdated,
-    onBeforeUpdate,
-    onBeforeUnmount,
-    ref, reactive
-} from "vue";
-import {
-    useStore
-} from "vuex";
-
-const store = useStore();
-
-
-
 
 
 

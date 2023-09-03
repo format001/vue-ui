@@ -2,22 +2,22 @@
     <div class="login-tab">
         <div class="login-nav">
             <div
-                v-for="tab of tabData"
+                v-for="tab of state.tabData"
                 :key="tab"
-                :class="['nav-item', { active: currentTab === tab }]"
+                :class="['nav-item', { active: state.currentTab === tab }]"
                 @click="changeTab(tab)"
             >{{ tab }}
             </div>
         </div>
         <div class="login-component">
             <keep-alive>
-                <component :is="currentTabComponent"></component>
+                <component :is="component[state.currentTab]"></component>
             </keep-alive>
         </div>
     </div>
 </template>
 
-<script>
+<script setup>
 /**
  * keep-alive
  *
@@ -79,7 +79,7 @@
  * 一个组件容器
  *
  */
-import {defineAsyncComponent, ref} from 'vue';
+import {defineAsyncComponent, reactive, markRaw, inject, provide} from 'vue';
 import Loading from './Loading.vue';
 import Error from './Error.vue';
 
@@ -104,34 +104,21 @@ const MobileLogin = defineAsyncComponent({
 //     })
 // });
 
+    const state = reactive({
+        currentTab: 'Account',
+        tabData: ['Account', 'Qrcode', 'Mobile'],
+    })
 
+    const component = markRaw({
+        Account: AccountLogin,
+        Qrcode: QrcodeLogin,
+        Mobile: MobileLogin
+    });
 
-export default {
-    name: 'MainLogin',
-    components: {
-        AccountLogin,
-        QrcodeLogin,
-        MobileLogin
-        // QrcodeLogin: () => import('./QrcodeLogin'),
-        // MobileLogin: () => import('./MobileLogin')
-    },
-    data () {
-        return {
-            currentTab: 'Account',
-            tabData: ['Account', 'Qrcode', 'Mobile']
-        }
-    },
-    methods: {
-        changeTab (tab) {
-            this.currentTab = tab;
-        },
-    },
-    computed: {
-        currentTabComponent () {
-            return this.currentTab.toLowerCase() + '-login';
-        }
-    },
-}
+    function changeTab(tab) {
+        state.currentTab = tab;
+    }
+
 </script>
 
 <style lang="scss">

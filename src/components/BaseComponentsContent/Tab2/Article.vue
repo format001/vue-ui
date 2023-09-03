@@ -6,28 +6,10 @@
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Article',
-  data () {
-    return {
-      visitedCount: 0
-    }
-  },
-  mounted () {
-    console.log('Article mounted');
-  },
-  unmounted () {
-    console.log('Article unmounted');
-  },
-  activated () {
-    console.log('Article activated');
-    this.visitedCount ++;
-  },
-  deactivated () {
-    console.log('Article deactivated');
-  }
-}
+<script setup>
+    import {ref} from "vue";
+
+    const visitedCount = ref(0)
 </script>
 
 <style>

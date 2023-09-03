@@ -14,15 +14,13 @@
 
 <script setup>
 import {
-    reactive
+    reactive,
 } from "vue";
 
     let state = reactive({
         username: 'messi',
         password: '123'
     })
-
-
 </script>
 
 <style lang="scss">
