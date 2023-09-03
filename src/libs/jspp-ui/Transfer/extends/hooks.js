@@ -6,7 +6,7 @@ import {
 
 function useTargetIndex (initialIndex) {
     const targetIndex = ref(initialIndex);
-
+    console.log(targetIndex)
     function setTargetIndex (newIndex) {
         targetIndex.value = Number(newIndex);
     }

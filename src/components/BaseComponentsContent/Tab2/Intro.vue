@@ -13,20 +13,8 @@ export default {
     return {
       visitedCount: 0
     }
-  },
-  mounted () {
-    console.log('Intro mounted');
-  },
-  unmounted () {
-    console.log('Intro unmounted');
-  },
-  activated () {
-    console.log('Intro activated');
-    this.visitedCount ++;
-  },
-  deactivated () {
-    console.log('Intro deactivated');
   }
+
 }
 </script>
 

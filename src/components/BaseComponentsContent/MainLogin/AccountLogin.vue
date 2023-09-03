@@ -13,29 +13,16 @@
 </template>
 
 <script setup>
-
-import {onActivated, onDeactivated, onMounted, onUnmounted, onUpdated, reactive} from "vue";
+import {
+    reactive
+} from "vue";
 
     let state = reactive({
-        username: '',
-        password: ''
+        username: 'messi',
+        password: '123'
     })
 
-    onMounted(() => {
-        console.log('onMounted')
-    });
-    onActivated(() => {
-        console.log('onActivated')
-    });
-    onUpdated(() => {
-        console.log('onUpdated')
-    })
-    onUnmounted(() => {
-        console.log('onUnmounted')
-    });
-    onDeactivated(() => {
-        console.log('onDeactivated')
-    });
+
 </script>
 
 <style lang="scss">

@@ -58,6 +58,13 @@ import ButtonGroup from './components/ButtonGroup.vue';
 import ListItem from './components/ListItem.vue';
 
 import propsDefinition from './extends/props.js';
+import {
+    useTargetIndex,
+    useRightListData,
+    useCheckedData,
+    useComputedData,
+    useDragedItem
+} from './extends/hooks.js'
 
 const props = defineProps(propsDefinition);
 const options = props.data.map(({ title }) => title);
