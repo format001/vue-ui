@@ -9,34 +9,11 @@
     </div>
 </template>
 
-<script>
-import MainLogin from '../components/BaseComponentsContent/MainLogin/index.vue'
-import HeaderPage from 'components/BaseHeader/Index'
+<script setup>
 import BaseAside from 'components/BaseAside/Index'
 import BaseComponentsContent from 'components/BaseComponentsContent/Index'
 
-import BScroll from '@better-scroll/core'
 
-export default {
-    name: "Component",
-    components: {
-        MainLogin,
-        HeaderPage,
-        BaseAside,
-        BaseComponentsContent,
-    },
-    mounted () {
-        // this.scroll = new BScroll(this.$refs.bs, {
-        //     probeType: 3,
-        //     pullUpLoad: true
-        // })
-
-    },
-    beforeRouteEnter(to, from) {
-
-
-    },
-}
 </script>
 
 <style scoped lang="scss">

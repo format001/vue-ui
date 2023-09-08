@@ -1,19 +1,9 @@
 <template>
     <div class="wrapper">
-        home
+        <span ref="p"> item-2</span>
     </div>
 </template>
 
-<script setup>
-
-
+<script >
 
 </script>
-
-<style scoped lang="scss">
-.wrapper{
-    margin-left: 50px;
-    height: 100%;
-    overflow-y: scroll;
-}
-</style>

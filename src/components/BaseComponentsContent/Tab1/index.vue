@@ -14,7 +14,7 @@ export default {
     components: {
         TabIndex
     },
-    setup(){
+    setup(props, ctx){
         let tabData = reactive({
             initialIndex: 0,
             searchValue: 'CONTENT-1',
