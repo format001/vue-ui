@@ -1,6 +1,6 @@
 <template>
   <div class="tab-search">
-    <input 
+    <input
       type="text"
       v-model="value"
     />
@@ -11,16 +11,6 @@
 export default {
   name: 'tab-search',
   props: ['searchValue'],
-  // computed: {
-  //   value: {
-  //     get () {
-  //       return this.searchValue
-  //     },
-  //     set (newValue) {
-  //       this.$emit('update:searchValue', newValue);
-  //     }
-  //   }
-  // }
   data () {
     return {
       value: this.searchValue

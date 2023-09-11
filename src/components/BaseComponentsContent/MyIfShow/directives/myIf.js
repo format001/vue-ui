@@ -4,6 +4,8 @@ export default {
 }
 
 function mounted (el, bindings) {
+  console.log(bindings)
+
   const isShow = bindings.value;
   el.commentNode = document.createComment('v-if');
 

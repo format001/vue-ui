@@ -23,7 +23,7 @@ import {
     reactive,
     toRefs,
     onMounted,
-    ref
+    ref, getCurrentInstance, nextTick
 } from 'vue'
 
 export default {
@@ -78,17 +78,10 @@ export default {
             }
         }
     },
-    setup (props, ctx) {
+    setup (props, {expose}) {
+        const childRef = ref();
 
-        // const titleRef = ref(null);
-        // const childRef = ref(null);
-        //
-        // console.log(titleRef.value);  // value null
-        //
-        // onMounted(() => {
-        //   console.log(titleRef.value); // 元素对象
-        //   console.log(childRef.value); // 组件的实例
-        // });
+
         const state = reactive({
             inputValue: '',
             searchValue: ''
@@ -108,7 +101,7 @@ export default {
             ...toRefs(state),
             searchOptions,
             // titleRef,
-            // childRef
+            childRef
         }
     }
 }

@@ -41,6 +41,10 @@ export default {
             }
         }
 
+        ctx.expose({
+            a: 1
+        })
+
         return {
             searchOptions,
             setValue

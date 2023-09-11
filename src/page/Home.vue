@@ -1,9 +1,9 @@
 <template>
     <div class="wrapper">
-        <span ref="p"> item-2</span>
+        <selector-ui></selector-ui>
     </div>
 </template>
 
-<script >
+<script setup>
 
 </script>

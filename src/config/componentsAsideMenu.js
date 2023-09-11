@@ -4,6 +4,10 @@ export default [
         compsLabelName: 'stars-ui',
     },
     {
+        title: 'select组件',
+        compsLabelName: 'selector-ui',
+    },
+    {
         title: '放大镜-全局组件',
         compsLabelName: 'magnifier-ui'
     },

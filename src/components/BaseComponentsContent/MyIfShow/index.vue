@@ -19,6 +19,17 @@
  * myShow -> v-my-show
  */
 
+// import {
+//     myShow as vMyShow,
+//     myIf as vMyIf
+// } from './directives/index.js';
+// import {reactive} from "vue";
+//
+//     const state  = reactive({
+//         visible1 = false,
+//         visible2 = false
+//     })
+
 import {
     myShow,
     myIf

@@ -1,6 +1,7 @@
 <template>
-    <div class="tab" ref="a">
-        <tab-search ref="b"
+    <div class="tab" >
+        {{$attrs.class}}
+        <tab-search
             :searchValue="searchValue"
             @update:search-value="updateSearchValue"
         ></tab-search>
@@ -36,7 +37,6 @@ export default {
         }
     },
     mounted () {
-        console.dir(this.$attrs)
         if (this.tabData.searchValue) {
             this.updateSearchValue(this.tabData.searchValue);
         }

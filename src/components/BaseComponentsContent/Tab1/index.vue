@@ -1,6 +1,9 @@
 <template>
     <div class="tab">
         <tab-index
+            :a="1"
+            :b="2"
+            :class="['box', 'item']"
             :tab-data="tabData"
         ></tab-index>
     </div>
@@ -14,6 +17,7 @@ export default {
     components: {
         TabIndex
     },
+    inheritAttrs: false,
     setup(props, ctx){
         let tabData = reactive({
             initialIndex: 0,

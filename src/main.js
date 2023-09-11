@@ -1,5 +1,5 @@
 import {
-    createApp, ref,
+    createApp,
 } from 'vue'
 import App from './App.vue'
 
@@ -18,6 +18,7 @@ import MyUiComponents from './libs/jspp-ui/index.js'
 * 全局注册自定义指令 VueLazyLoad
 * */
 import VueLazyLoad from './libs/directives/vueLazyLoad/index.js'
+
 
 /*
 *应用实例

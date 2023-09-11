@@ -10,9 +10,8 @@
 </template>
 
 <script setup>
-    import BaseLayout from './components/BaseLayout/index.vue';
-    import BaseHeader from './components/BaseHeader/index.vue';
-
+import BaseLayout from './components/BaseLayout/index.vue';
+import BaseHeader from './components/BaseHeader/index.vue';
 
 
 
