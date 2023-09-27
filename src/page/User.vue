@@ -1,26 +1,15 @@
 <template>
-    <div class="user">
-
-    </div>
-
+    <router-view v-slot="props">
+        <div>
+            <p>Route Params: {{ props.route.params }}</p>
+            <p>Route Query: {{ props.route.query }}</p>
+        </div>
+    </router-view>
 </template>
 
-<script>
+<script setup>
+import {  useLink } from 'vue-router'
+
 
 
 </script>
-
-<style scoped lang="scss">
-.user{
-    //width: 200px;
-    margin: 100px auto;
-    text-align: center;
-
-    .title{
-        font-size: 20px;
-    }
-    .brn-group {
-        padding-top: 30px;
-    }
-}
-</style>

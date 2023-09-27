@@ -37,15 +37,19 @@ const routes = [
             '../page/Component.vue'
             ),
     },
-    { path: '/:pathMatch(.*)*', redirect: '/'  },
+    // { path: '/:pathMatch(.*)*', redirect: '/'  },
     {
-        path: '/user',
+        path: '/profile',
+        name: 'Profile',
+        component: () => import(
+            '../page/Profile.vue'),
+        // children: []
+    },
+    {
+        path: '/users/:username*',
         name: 'User',
         props: true,
-        meta: { requiresAuth: true },
-        component: () => import(
-            '../page/User.vue'
-            ),
+        component: () => import('../page/User.vue'),
         children: [
             {
                 // 当 /user/:id/profile 匹配成功
@@ -64,7 +68,8 @@ const routes = [
                     '../page/Posts.vue'
                     ),
             },
-            { path: '',
+            {
+                path: 'UserEmpty',
                 name: 'UserEmpty',
                 component: () => import(
                     '../page/UserHome.vue'
@@ -80,10 +85,8 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from, next) => {
-
-    // 将匹配所有内容并将其放在 `$route.params.pathMatch` 下
-    // 返回 false 以取消导航
-   next();
+    next()
 });
+
 
 export default router;

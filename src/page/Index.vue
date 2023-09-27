@@ -1,18 +1,26 @@
 <template>
     <div class="index-wrapper">
-        index
+        <router-link to="users/eduardo/sad/123">toUser</router-link>
+        <button @click="routerPush">点击</button>
     </div>
 </template>
 
 <script setup>
+import { useRouter } from "vue-router";
+
+const router = useRouter()
+const routerPush = () => {
+
+    router.push({
+        name: 'User',
+        params: {username: 'username'},
+        query: {
+            name: 'messi',
+            age: 123
+        },
+        redirect: 'Profile'
+    })
+}
+
 
 </script>
-
-<style scoped lang="scss">
-.index-wrapper {
-    //width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-    font-size: .1rem;
-}
-</style>

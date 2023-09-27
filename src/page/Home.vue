@@ -1,9 +1,13 @@
 <template>
     <div class="wrapper">
-        <selector-ui></selector-ui>
+            home
     </div>
 </template>
 
 <script setup>
+import {useRouter} from "vue-router";
+
+const router = useRouter();
+
 
 </script>

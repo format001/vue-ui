@@ -2,12 +2,9 @@
     <div>UserHome</div>
 </template>
 
-<script>
-export default {
-    name: "UserHome"
-}
+<script setup>
+
+
+
+
 </script>
-
-<style scoped>
-
-</style>
