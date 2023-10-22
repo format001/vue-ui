@@ -15,8 +15,7 @@ const routerPush = () => {
         name: 'User',
         params: {username: 'username'},
         query: {
-            name: 'messi',
-            age: 123
+            name: 'messi'
         },
         redirect: 'Profile'
     })
